@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function Home() {
   return (
@@ -31,6 +32,14 @@ export default function Home() {
             >
               About Me
             </Link>
+            <a
+              href="/Sunit Poddar_Senior Backend Engineer.pdf"
+              download="Sunit Poddar_Senior Backend Engineer.pdf"
+              className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-foreground bg-accent rounded-lg hover:bg-accent/80 transition-colors border border-border"
+            >
+              <Download className="h-4 w-4 mr-2" />
+              Download Resume
+            </a>
           </div>
         </div>
       </section>

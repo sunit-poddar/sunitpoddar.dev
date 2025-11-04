@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 export default function About() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -8,6 +10,16 @@ export default function About() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Passionate about building scalable systems and exploring new technologies
             </p>
+            <div className="pt-4">
+              <a
+                href="/Sunit Poddar_Senior Backend Engineer.pdf"
+                download="Sunit Poddar_Senior Backend Engineer.pdf"
+                className="inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download Resume
+              </a>
+            </div>
           </header>
 
           <div className="grid md:grid-cols-2 gap-8">
