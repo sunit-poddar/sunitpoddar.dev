@@ -94,7 +94,7 @@ export default function Home() {
 
                   <div className="flex gap-2">
                     <a
-                      href="https://linkedin.com/in/sunitpoddar"
+                      href="https://linkedin.com/in/sunit-poddar"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center px-3 py-2 text-xs font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300"
@@ -106,7 +106,7 @@ export default function Home() {
                     </a>
 
                     <a
-                      href="mailto:sunitpoddar@gmail.com"
+                      href="mailto:ranjan.sunit@gmail.com"
                       className="flex-1 inline-flex items-center justify-center px-3 py-2 text-xs font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300"
                     >
                       <Mail className="h-4 w-4 mr-1" />

@@ -14,8 +14,8 @@ export default function Header() {
 
   const socialLinks = [
     { href: "https://github.com/sunit-poddar", icon: Github, label: "GitHub" },
-    { href: "https://linkedin.com/in/sunitpoddar", icon: Linkedin, label: "LinkedIn" },
-    { href: "mailto:sunitpoddar@gmail.com", icon: Mail, label: "Email" },
+    { href: "https://linkedin.com/in/sunit-poddar", icon: Linkedin, label: "LinkedIn" },
+    { href: "mailto:ranjan.sunit@gmail.com", icon: Mail, label: "Email" },
   ];
 
   return (
