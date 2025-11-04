@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, Download, FileText } from "lucide-react";
 
 export default function Contact() {
   const contactMethods = [
@@ -30,6 +30,14 @@ export default function Contact() {
       href: "https://twitter.com/sunitpoddar",
       description: "Follow for updates on tech and development insights",
     },
+    {
+      icon: FileText,
+      label: "Resume",
+      value: "Download PDF",
+      href: "/Sunit Poddar_Senior Backend Engineer.pdf",
+      description: "Download my resume for detailed experience and qualifications",
+      isDownload: true,
+    },
   ];
 
   return (
@@ -43,15 +51,16 @@ export default function Contact() {
             </p>
           </header>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method, index) => {
               const Icon = method.icon;
               return (
                 <a
                   key={index}
                   href={method.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={method.isDownload ? "_self" : "_blank"}
+                  rel={method.isDownload ? undefined : "noopener noreferrer"}
+                  download={method.isDownload ? "Sunit Poddar_Senior Backend Engineer.pdf" : undefined}
                   className="group bg-muted/50 rounded-lg p-6 border border-border hover:shadow-lg hover:border-primary/50 transition-all duration-200"
                 >
                   <div className="space-y-3">
