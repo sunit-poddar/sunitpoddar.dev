@@ -2,14 +2,16 @@
 import ThemeToggle from "./themeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Terminal, Code2, User, Briefcase, Mail, Github, Linkedin } from "lucide-react";
+import { Terminal, Code2, User, Briefcase, Mail, Github, Linkedin, BookOpen } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
     { href: "/", label: "~/", icon: Terminal, description: "home" },
-    { href: "/projects", label: "work/", icon: Briefcase, description: "portfolio" },
+    { href: "/work", label: "work/", icon: Briefcase, description: "professional" },
+    { href: "/weekend-projects", label: "weekend-projects/", icon: Code2, description: "personal" },
+    { href: "/blogs", label: "blogs/", icon: BookOpen, description: "writing" },
   ];
 
   const socialLinks = [
