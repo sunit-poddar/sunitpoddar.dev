@@ -67,7 +67,7 @@ export default function Header() {
           {/* Social Links & Theme Toggle */}
           <div className="flex items-center space-x-4">
             {/* Social Links */}
-            <div className="hidden sm:flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
