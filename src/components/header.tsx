@@ -14,8 +14,8 @@ export default function Header() {
 
   const socialLinks = [
     { href: "https://github.com/sunit-poddar", icon: Github, label: "GitHub" },
-    { href: "https://linkedin.com/in/sunitpoddar", icon: Linkedin, label: "LinkedIn" },
-    { href: "mailto:sunitpoddar@gmail.com", icon: Mail, label: "Email" },
+    { href: "https://linkedin.com/in/sunit-poddar", icon: Linkedin, label: "LinkedIn" },
+    { href: "mailto:ranjan.sunit@gmail.com", icon: Mail, label: "Email" },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function Header() {
           {/* Social Links & Theme Toggle */}
           <div className="flex items-center space-x-4">
             {/* Social Links */}
-            <div className="hidden sm:flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
