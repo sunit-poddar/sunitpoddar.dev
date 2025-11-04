@@ -35,32 +35,85 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
         <div className="max-w-6xl mx-auto space-y-8">
-          {/* Terminal at the top */}
-          <div className="glass rounded-lg p-5 code-font text-sm">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="flex space-x-2">
-                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-amber-400 rounded-full"></div>
-                <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+          {/* Terminal with contact buttons */}
+          <div className="grid lg:grid-cols-3 gap-6 items-start">
+            {/* Terminal */}
+            <div className="lg:col-span-2 glass rounded-lg p-5 code-font text-sm">
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-amber-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                </div>
+                <span className="text-muted-foreground text-sm">sunit@backend-systems ~ %</span>
               </div>
-              <span className="text-muted-foreground text-sm">sunit@backend-systems ~ %</span>
+              <div className="space-y-1.5">
+                <div className="text-emerald-400">$ whoami</div>
+                <div className="text-muted-foreground">Sunit Ranjan Poddar - Backend Engineer</div>
+
+                <div className="text-emerald-400 mt-4">$ echo $SPECIALIZATION</div>
+                <div className="text-muted-foreground">Distributed Systems | Search Platforms | Scalable APIs</div>
+
+                <div className="text-emerald-400 mt-4">$ grep -r "core_stack" .profile</div>
+                <div className="text-muted-foreground">Go | Python | Kafka | Elasticsearch | Postgres | GCP | Kubernetes | Docker</div>
+
+                <div className="text-emerald-400 mt-4">$ git status</div>
+                <div className="text-muted-foreground">On branch <span className="text-amber-400">main</span> — Ready for new opportunities</div>
+
+                <div className="flex items-center space-x-2 mt-3">
+                  <span className="text-emerald-400">$</span>
+                  <div className="w-2 h-5 bg-primary animate-pulse"></div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-1.5">
-              <div className="text-emerald-400">$ whoami</div>
-              <div className="text-muted-foreground">Sunit Ranjan Poddar - Backend Engineer</div>
 
-              <div className="text-emerald-400 mt-4">$ echo $SPECIALIZATION</div>
-              <div className="text-muted-foreground">Distributed Systems | Search Platforms | Scalable APIs</div>
+            {/* Contact & Download Actions */}
+            <div className="space-y-4">
+              <div className="glass rounded-lg p-4">
+                <h3 className="text-sm font-semibold text-foreground mb-3">Quick Actions</h3>
+                <div className="space-y-3">
+                  <a
+                    href="/Sunit Poddar_Senior Backend Engineer.pdf"
+                    download="Sunit Poddar_Senior Backend Engineer.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
+                    onClick={(e) => {
+                      const button = e.currentTarget;
+                      const originalText = button.innerHTML;
+                      button.innerHTML = '<svg class="h-4 w-4 mr-2 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Downloading...';
 
-              <div className="text-emerald-400 mt-4">$ grep -r "core_stack" .profile</div>
-              <div className="text-muted-foreground">Go | Python | Kafka | Elasticsearch | Postgres | GCP | Kubernetes | Docker</div>
+                      setTimeout(() => {
+                        button.innerHTML = originalText;
+                      }, 2000);
+                    }}
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download Resume
+                  </a>
 
-              <div className="text-emerald-400 mt-4">$ git status</div>
-              <div className="text-muted-foreground">On branch <span className="text-amber-400">main</span> — Ready for new opportunities</div>
+                  <div className="flex gap-2">
+                    <a
+                      href="https://linkedin.com/in/sunitpoddar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center px-3 py-2 text-xs font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300"
+                    >
+                      <svg className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
 
-              <div className="flex items-center space-x-2 mt-3">
-                <span className="text-emerald-400">$</span>
-                <div className="w-2 h-5 bg-primary animate-pulse"></div>
+                    <a
+                      href="mailto:sunitpoddar@gmail.com"
+                      className="flex-1 inline-flex items-center justify-center px-3 py-2 text-xs font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300"
+                    >
+                      <Mail className="h-4 w-4 mr-1" />
+                      Email
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -93,8 +146,8 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              {/* View Work Button */}
+              <div className="pt-4">
                 <Link
                   href="/projects"
                   className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
@@ -103,27 +156,6 @@ export default function Home() {
                   View Work
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-
-                <a
-                  href="/Sunit Poddar_Senior Backend Engineer.pdf"
-                  download="Sunit Poddar_Senior Backend Engineer.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300 hover:scale-105 active:scale-95"
-                  onClick={(e) => {
-                    // Show visual feedback
-                    const button = e.currentTarget;
-                    const originalText = button.innerHTML;
-                    button.innerHTML = '<svg class="h-5 w-5 mr-2 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Downloading...';
-
-                    setTimeout(() => {
-                      button.innerHTML = originalText;
-                    }, 2000);
-                  }}
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  Resume
-                </a>
               </div>
             </div>
 
