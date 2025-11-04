@@ -28,9 +28,9 @@ export default function Header() {
               <Code2 className="h-8 w-8 text-primary group-hover:text-violet-400 transition-colors duration-300" />
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
             </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold gradient-text">Sunit Ranjan Poddar</div>
-              <div className="text-xs code-font text-muted-foreground">Senior Backend Engineer</div>
+            <div className="block">
+              <div className="text-base sm:text-lg font-bold gradient-text">Sunit Ranjan Poddar</div>
+              <div className="text-xs code-font text-muted-foreground hidden sm:block">Senior Backend Engineer</div>
             </div>
           </Link>
 

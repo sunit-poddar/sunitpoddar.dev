@@ -18,11 +18,11 @@
   --color-destructive-foreground: #ffffff;
   --color-ring: #6366f1;
 
-  /* Modern accent colors */
-  --color-emerald: #10b981;
-  --color-amber: #f59e0b;
-  --color-violet: #8b5cf6;
-  --color-cyan: #06b6d4;
+  /* Modern accent colors - darker for better light mode contrast */
+  --color-emerald: #059669;
+  --color-amber: #d97706;
+  --color-violet: #7c3aed;
+  --color-cyan: #0891b2;
 }
 
 .dark {
@@ -88,20 +88,104 @@ body {
 
 /* Glassmorphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .dark .glass {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(51, 65, 85, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 /* Code font for technical elements */
 .code-font {
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Consolas', monospace;
+}
+
+/* Enhanced visibility for colored indicators in light mode */
+.text-emerald-400 {
+  color: #059669 !important;
+}
+
+.text-amber-400 {
+  color: #d97706 !important;
+}
+
+.text-sky-400 {
+  color: #0284c7 !important;
+}
+
+.text-cyan-400 {
+  color: #0891b2 !important;
+}
+
+.text-pink-400 {
+  color: #db2777 !important;
+}
+
+.bg-emerald-400 {
+  background-color: #059669 !important;
+}
+
+.bg-amber-400 {
+  background-color: #d97706 !important;
+}
+
+.bg-sky-400 {
+  background-color: #0284c7 !important;
+}
+
+.bg-cyan-400 {
+  background-color: #0891b2 !important;
+}
+
+.bg-pink-400 {
+  background-color: #db2777 !important;
+}
+
+/* Dark mode - restore original lighter colors */
+.dark .text-emerald-400 {
+  color: #34d399 !important;
+}
+
+.dark .text-amber-400 {
+  color: #fbbf24 !important;
+}
+
+.dark .text-sky-400 {
+  color: #38bdf8 !important;
+}
+
+.dark .text-cyan-400 {
+  color: #22d3ee !important;
+}
+
+.dark .text-pink-400 {
+  color: #f472b6 !important;
+}
+
+.dark .bg-emerald-400 {
+  background-color: #34d399 !important;
+}
+
+.dark .bg-amber-400 {
+  background-color: #fbbf24 !important;
+}
+
+.dark .bg-sky-400 {
+  background-color: #38bdf8 !important;
+}
+
+.dark .bg-cyan-400 {
+  background-color: #22d3ee !important;
+}
+
+.dark .bg-pink-400 {
+  background-color: #f472b6 !important;
 }
 
 /* Smooth animations */
