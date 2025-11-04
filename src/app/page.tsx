@@ -72,6 +72,15 @@ export default function Home() {
               <div className="glass rounded-lg p-4">
                 <h3 className="text-sm font-semibold text-foreground mb-3">Quick Actions</h3>
                 <div className="space-y-3">
+                  <Link
+                    href="/projects"
+                    className="group w-full inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                  >
+                    <Code2 className="h-4 w-4 mr-2" />
+                    My Work
+                    <ArrowRight className="h-3 w-3 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+
                   <a
                     href="/Sunit Poddar_Senior Backend Engineer.pdf"
                     download="Sunit Poddar_Senior Backend Engineer.pdf"
@@ -146,17 +155,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* View Work Button */}
-              <div className="pt-4">
-                <Link
-                  href="/projects"
-                  className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
-                >
-                  <Code2 className="h-5 w-5 mr-2" />
-                  View Work
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
             </div>
 
             {/* Right Column - Current Focus */}
@@ -184,14 +182,6 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
-                    <div>
-                      <div className="text-foreground font-medium">Frontend Learning</div>
-                      <div className="text-muted-foreground">Next.js 15 & modern React patterns</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
                     <div>
                       <div className="text-foreground font-medium">Distributed Systems</div>
@@ -214,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Engineering Philosophy */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto">
           <div className="glass rounded-lg p-6">
             <h2 className="text-2xl font-bold text-foreground flex items-center justify-center mb-6">
@@ -252,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* Contact & Collaboration */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="max-w-6xl mx-auto space-y-8">
           <header className="text-center space-y-3">
             <h2 className="text-2xl font-bold text-foreground">Let's Connect</h2>
