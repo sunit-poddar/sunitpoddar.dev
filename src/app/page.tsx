@@ -3,8 +3,8 @@ import { Download, Terminal, Code2, ArrowRight, Mail, MessageSquare, FileText, B
 
 export default function Home() {
   const techStack = [
-    "Node.js", "ElasticSearch", "PostgreSQL", "Redis", "Docker", "Kubernetes",
-    "gRPC", "Next.js", "React", "TypeScript", "AWS", "Microservices"
+    "Go", "Python", "Node.JS", "Redis", "PostgreSQL", "BigQuery", "MongoDB", "Elasticsearch", "Docker", "Kubernetes",
+    "Grafana", "Datadog", "gRPC", "GCP", "Microservices"
   ];
 
   const collaborationTypes = [
@@ -12,7 +12,7 @@ export default function Home() {
       title: "Senior Backend Roles",
       description: "Full-time positions focusing on scalable systems, search infrastructure, and team leadership",
       icon: Code2,
-      keywords: ["Node.js", "Microservices", "ElasticSearch", "System Design"]
+      keywords: ["Go", "Python", "Microservices", "ElasticSearch", "System Design"]
     },
     {
       title: "Technical Consulting",
@@ -21,10 +21,10 @@ export default function Home() {
       keywords: ["Architecture", "Performance", "Search", "Optimization"]
     },
     {
-      title: "Mentorship & Speaking",
+      title: "Leadership & Management",
       description: "Engineering mentorship, technical talks, and knowledge sharing initiatives",
       icon: FileText,
-      keywords: ["Mentorship", "Speaking", "Teaching", "Knowledge Sharing"]
+      keywords: ["Mentorship", "Team leadership", "Cross-team collaborations"]
     }
   ];
 
@@ -54,8 +54,8 @@ export default function Home() {
                   <div className="text-emerald-400 mt-3">$ echo $SPECIALIZATION</div>
                   <div className="text-muted-foreground">Distributed Systems | Search Platforms | Scalable APIs</div>
 
-                  <div className="text-emerald-400 mt-3">$ grep -r "stack" config</div>
-                  <div className="text-muted-foreground">Go | Python | Kafka | Elasticsearch | PostgreSQL | Kubernetes</div>
+                  <div className="text-emerald-400 mt-3">$ grep -r "core_stack" .profile</div>
+                  <div className="text-muted-foreground">Go | Python | Kafka | Elasticsearch | Postgres | GCP | Kubernetes | Docker </div>
 
                   <div className="text-emerald-400 mt-3">$ git status</div>
                   <div className="text-muted-foreground">On branch <span className="text-amber-400">main</span> — Ready for new opportunities</div>
@@ -76,8 +76,8 @@ export default function Home() {
                   </h1>
 
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    A Senior Backend Engineer with <span className="text-primary font-semibold">8+ years</span> of experience
-                    building high-scale distributed systems, search architectures, and robust APIs.
+                    A backend engineer who loves building distributed systems that scale gracefully. I've spent the last <span className="text-primary font-semibold">8+ years</span> crafting APIs, search architectures, 
+                    and high-performance pipelines that quietly power big things
                   </p>
 
                   <div className="flex flex-wrap gap-2">
@@ -94,13 +94,13 @@ export default function Home() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <Link
                     href="/projects"
                     className="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                   >
                     <Code2 className="h-5 w-5 mr-2" />
-                    View Projects
+                    View Work
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
@@ -117,7 +117,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column - Current Focus & Status */}
+            {/* Right Column - Current Focus */}
             <div className="space-y-4">
               {/* Current Focus */}
               <div className="glass rounded-lg p-4">
@@ -129,34 +129,41 @@ export default function Home() {
                   <div className="flex items-start space-x-2">
                     <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-1.5 animate-pulse flex-shrink-0"></div>
                     <div>
-                      <div className="text-foreground font-medium">Search Architecture</div>
-                      <div className="text-muted-foreground">ElasticSearch infrastructures</div>
+                      <div className="text-foreground font-medium">System Architecture</div>
+                      <div className="text-muted-foreground">Scalable & resilient service design</div>
                     </div>
                   </div>
+
+                  <div className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-sky-400 rounded-full mt-1.5 animate-pulse flex-shrink-0"></div>
+                    <div>
+                      <div className="text-foreground font-medium">Applied AI</div>
+                      <div className="text-muted-foreground">Understanding & integrating intelligent systems</div>
+                    </div>
+                  </div>
+
                   <div className="flex items-start space-x-2">
                     <div className="w-1.5 h-1.5 bg-amber-400 rounded-full mt-1.5 animate-pulse flex-shrink-0"></div>
                     <div>
                       <div className="text-foreground font-medium">Frontend Learning</div>
-                      <div className="text-muted-foreground">Next.js 15 & React patterns</div>
+                      <div className="text-muted-foreground">Next.js 15 & modern React patterns</div>
                     </div>
                   </div>
+
                   <div className="flex items-start space-x-2">
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 animate-pulse flex-shrink-0"></div>
                     <div>
-                      <div className="text-foreground font-medium">Microservices</div>
-                      <div className="text-muted-foreground">Distributed systems with K8s</div>
+                      <div className="text-foreground font-medium">Distributed Systems</div>
+                      <div className="text-muted-foreground">Microservices with K8s & cloud orchestration</div>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Status */}
-              <div className="glass rounded-lg p-3 border border-emerald-400/30">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse flex-shrink-0"></div>
-                  <div>
-                    <div className="text-xs font-medium text-foreground">Available for opportunities</div>
-                    <div className="text-xs text-muted-foreground">Senior backend & tech lead roles</div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-pink-400 rounded-full mt-1.5 animate-pulse flex-shrink-0"></div>
+                    <div>
+                      <div className="text-foreground font-medium">Developer Experience</div>
+                      <div className="text-muted-foreground">Optimizing workflows & engineering velocity</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -166,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Engineering Philosophy */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="glass rounded-lg p-6">
             <h2 className="text-2xl font-bold text-foreground flex items-center justify-center mb-6">
@@ -204,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Contact & Collaboration */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto space-y-8">
           <header className="text-center space-y-3">
             <h2 className="text-2xl font-bold text-foreground">Let's Connect</h2>

@@ -9,7 +9,7 @@ export default function Header() {
 
   const navItems = [
     { href: "/", label: "~/", icon: Terminal, description: "home" },
-    { href: "/projects", label: "projects/", icon: Briefcase, description: "work" },
+    { href: "/projects", label: "work/", icon: Briefcase, description: "portfolio" },
   ];
 
   const socialLinks = [
