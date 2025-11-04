@@ -73,7 +73,7 @@ export default function Home() {
                 <h3 className="text-sm font-semibold text-foreground mb-3">Quick Actions</h3>
                 <div className="space-y-3">
                   <Link
-                    href="/projects"
+                    href="/work"
                     className="group w-full inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                   >
                     <Code2 className="h-4 w-4 mr-2" />
@@ -166,14 +166,6 @@ export default function Home() {
                 </h3>
                 <div className="space-y-4 text-sm">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
-                    <div>
-                      <div className="text-foreground font-medium">System Architecture</div>
-                      <div className="text-muted-foreground">Scalable & resilient service design</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-sky-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
                     <div>
                       <div className="text-foreground font-medium">Applied AI</div>
@@ -181,6 +173,13 @@ export default function Home() {
                     </div>
                   </div>
 
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
+                    <div>
+                      <div className="text-foreground font-medium">System Architecture</div>
+                      <div className="text-muted-foreground">Scalable & resilient service design</div>
+                    </div>
+                  </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 animate-pulse flex-shrink-0"></div>
                     <div>

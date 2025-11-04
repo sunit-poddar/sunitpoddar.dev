@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Play, Calendar, Users, Star, TrendingUp, Database, Search, Server, Globe } from "lucide-react";
 
-export default function Projects() {
+export default function Work() {
   const featuredProjects = [
     {
       title: "Search Infrastructure Overhaul",
@@ -91,7 +91,7 @@ export default function Projects() {
         <div className="space-y-12">
           {/* Header */}
           <header className="text-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl font-bold gradient-text">projects/</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold gradient-text">work/</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A showcase of production systems and technical initiatives.
               From search infrastructure to distributed architectures.
