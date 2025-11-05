@@ -1,6 +1,11 @@
-import { ExternalLink, Github, Play, Calendar, Users, Star, TrendingUp, Database, Search, Server, Globe } from "lucide-react";
+"use client";
+import { ExternalLink, Github, Play, Calendar, Users, Star, TrendingUp, Database, Search, Server, Globe, Eye } from "lucide-react";
+import { useState } from "react";
+import PDFModal from "../../components/pdfModal";
 
 export default function Work() {
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
+
   const featuredProjects = [
     {
       title: "Search Infrastructure Overhaul",
@@ -285,17 +290,25 @@ export default function Work() {
               >
                 Let's Connect
               </a>
-              <a
-                href="/Sunit Poddar_Senior Backend Engineer.pdf"
-                download="Sunit Poddar_Senior Backend Engineer.pdf"
+              <button
+                onClick={() => setIsPDFModalOpen(true)}
                 className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-foreground glass border border-border rounded-lg hover:bg-accent/50 transition-all duration-300 hover:scale-105"
               >
+                <Eye className="h-4 w-4 mr-2" />
                 View Resume
-              </a>
+              </button>
             </div>
           </section>
         </div>
       </div>
+
+      {/* PDF Modal */}
+      <PDFModal
+        isOpen={isPDFModalOpen}
+        onClose={() => setIsPDFModalOpen(false)}
+        pdfUrl="/Sunit Poddar_Senior Backend Engineer.pdf"
+        title="Sunit Poddar - Senior Backend Engineer Resume"
+      />
     </div>
   );
 }
