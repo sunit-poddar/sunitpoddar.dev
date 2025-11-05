@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
-import { Download, Terminal, Code2, ArrowRight, Mail, MessageSquare, FileText, BookOpen } from "lucide-react";
+import { Download, Terminal, Code2, ArrowRight, Mail, MessageSquare, FileText, BookOpen, Eye } from "lucide-react";
+import { useState } from "react";
+import PDFModal from "../components/pdfModal";
 
 export default function Home() {
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
+
   const techStack = [
     "Go", "Python", "Node.JS", "Kafka", "gRPC", "Redis", "PostgreSQL", "BigQuery", "MongoDB", "Elasticsearch", "Docker", "Kubernetes",
     "Grafana", "Datadog", "GCP", "Microservices"
@@ -81,25 +85,13 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
-                  <a
-                    href="/Sunit Poddar_Senior Backend Engineer.pdf"
-                    download="Sunit Poddar_Senior Backend Engineer.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setIsPDFModalOpen(true)}
                     className="w-full inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
-                    onClick={(e) => {
-                      const button = e.currentTarget;
-                      const originalText = button.innerHTML;
-                      button.innerHTML = '<svg class="h-4 w-4 mr-2 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Downloading...';
-
-                      setTimeout(() => {
-                        button.innerHTML = originalText;
-                      }, 2000);
-                    }}
                   >
-                    <Download className="h-4 w-4 mr-2" />
-                    Download Resume
-                  </a>
+                    <Eye className="h-4 w-4 mr-2" />
+                    View Resume
+                  </button>
 
                   <div className="flex gap-2">
                     <a
@@ -286,6 +278,14 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* PDF Modal */}
+      <PDFModal
+        isOpen={isPDFModalOpen}
+        onClose={() => setIsPDFModalOpen(false)}
+        pdfUrl="/Sunit Poddar_Senior Backend Engineer.pdf"
+        title="Sunit Poddar - Senior Backend Engineer Resume"
+      />
     </div>
   );
 }
